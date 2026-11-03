@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: uv pip install --system -r requirements.txt -r requirements-milvus.txt
+          cache: pip
+      - run: pip install -r requirements.txt -r requirements-milvus.txt
       - run: pytest -q
       - run: python -m eval.run_eval --groups A B C --no-llm
