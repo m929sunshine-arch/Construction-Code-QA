@@ -1,0 +1,15 @@
+{"id": "h01", "type": "fuzzy", "lang": "zh", "question": "浴缸和淋浴旁边的玻璃有什么安全要求？", "gold_sections": ["R308.4.5"]}
+{"id": "h02", "type": "fuzzy", "lang": "zh", "question": "沥青瓦每片至少要钉几颗钉子？", "gold_sections": ["R905.2.6"]}
+{"id": "h03", "type": "fuzzy", "lang": "zh", "question": "什么情况下厨房排风需要补风？", "gold_sections": ["M1503.6"]}
+{"id": "h04", "type": "fuzzy", "lang": "zh", "question": "寒冷地区的水管可以装在外墙里吗？", "gold_sections": ["P2603.5"]}
+{"id": "h05", "type": "fuzzy", "lang": "zh", "question": "卧室的电路需要装电弧故障断路器吗？", "gold_sections": ["E3902.16"]}
+{"id": "h06", "type": "fuzzy", "lang": "zh", "question": "车库里的燃气热水器点火源要离地多高？", "gold_sections": ["G2408.2"]}
+{"id": "h07", "type": "exact", "lang": "zh", "question": "没有防火等级要求的楼板，底面要做什么防火保护？", "gold_sections": ["R302.13"]}
+{"id": "h08", "type": "fuzzy", "lang": "zh", "question": "出户门外的平台可以比室内地面低多少？", "gold_sections": ["R311.3.1"]}
+{"id": "h09", "type": "exact", "lang": "en", "question": "What fasteners are required for a deck ledger attached to a band joist?", "gold_sections": ["R507.9.1.3"]}
+{"id": "h10", "type": "exact", "lang": "en", "question": "How must HVAC ducts be tested for air leakage?", "gold_sections": ["N1103.3.3"]}
+{"id": "h11", "type": "exact", "lang": "en", "question": "Which standard governs residential fire sprinkler system design?", "gold_sections": ["P2904.1"]}
+{"id": "h12", "type": "fuzzy", "lang": "en", "question": "How much air space is required between attic insulation and the roof sheathing at eave vents?", "gold_sections": ["R806.3"]}
+{"id": "h13", "type": "ood", "lang": "zh", "question": "商场的自动扶梯检修周期是多久？", "gold_sections": []}
+{"id": "h14", "type": "ood", "lang": "en", "question": "What are the parking space requirements for a shopping mall?", "gold_sections": []}
+{"id": "h15", "type": "ood", "lang": "zh", "question": "医院手术室的空气洁净度等级要求是什么？", "gold_sections": []}

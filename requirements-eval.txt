@@ -1,0 +1,4 @@
+# RAGAS 评测（需要 DEEPSEEK_API_KEY）。langchain-community 需低于 0.4，否则 ragas 0.4.x 导入报错
+ragas==0.4.3
+langchain-openai>=0.3
+langchain-community<0.4

@@ -1,0 +1,2 @@
+# 可选：Milvus Lite 向量库（仅 Linux / macOS）。Windows 用默认的内存向量库即可
+pymilvus[milvus_lite]>=2.5

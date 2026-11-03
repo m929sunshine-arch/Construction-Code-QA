@@ -1,0 +1,26 @@
+{"id": "q01", "type": "exact", "lang": "en", "question": "What does R602.3.1 say about 2x4 stud spacing in bearing walls?", "gold_sections": ["R602.3.1"]}
+{"id": "q02", "type": "exact", "lang": "en", "question": "What is the maximum riser height for stairs?", "gold_sections": ["R311.7.5.1"]}
+{"id": "q03", "type": "exact", "lang": "en", "question": "Minimum tread depth for a stairway", "gold_sections": ["R311.7.5.2"]}
+{"id": "q04", "type": "exact", "lang": "en", "question": "R807.1 attic access opening size", "gold_sections": ["R807.1"]}
+{"id": "q05", "type": "exact", "lang": "zh", "question": "R506.1 对混凝土地坪厚度的要求是什么？", "gold_sections": ["R506.1"]}
+{"id": "q06", "type": "exact", "lang": "en", "question": "How much bearing do joist ends need on masonry?", "gold_sections": ["R502.6"]}
+{"id": "q07", "type": "fuzzy", "lang": "zh", "question": "外墙立柱间距最大可以做到多少？", "gold_sections": ["R602.3.1"]}
+{"id": "q08", "type": "fuzzy", "lang": "zh", "question": "楼梯上方至少要留多高的净空？", "gold_sections": ["R311.7.2"]}
+{"id": "q09", "type": "fuzzy", "lang": "zh", "question": "卫生间的天花板可以比卧室低一点吗？", "gold_sections": ["R305.1"]}
+{"id": "q10", "type": "fuzzy", "lang": "zh", "question": "扶手应该装多高？", "gold_sections": ["R311.7.8.1"]}
+{"id": "q11", "type": "fuzzy", "lang": "en", "question": "How big does a window in a bedroom need to be so someone can climb out in a fire?", "gold_sections": ["R310.2.1"]}
+{"id": "q12", "type": "fuzzy", "lang": "zh", "question": "烟感需要装在哪些位置？", "gold_sections": ["R314.3"]}
+{"id": "q13", "type": "fuzzy", "lang": "zh", "question": "屋顶椽子什么时候需要用金属连接件固定到墙上？", "gold_sections": ["R802.11"]}
+{"id": "q14", "type": "fuzzy", "lang": "en", "question": "Where do I need fireblocking inside stud walls?", "gold_sections": ["R602.8"]}
+{"id": "q15", "type": "multi", "lang": "zh", "question": "卧室逃生窗的最小开口面积和窗台高度分别是多少？", "gold_sections": ["R310.2.1", "R310.2.2"]}
+{"id": "q16", "type": "multi", "lang": "en", "question": "When is a guard required and how tall must it be?", "gold_sections": ["R312.1.1", "R312.1.2"]}
+{"id": "q17", "type": "multi", "lang": "zh", "question": "阁楼通风的开口面积比例和防虫网要求是什么？", "gold_sections": ["R806.1", "R806.2"]}
+{"id": "q18", "type": "multi", "lang": "en", "question": "What are the minimum floor area and minimum dimension of a habitable room?", "gold_sections": ["R304.1", "R304.2"]}
+{"id": "q19", "type": "ood", "lang": "zh", "question": "商业建筑的自动喷淋系统有什么要求？", "gold_sections": []}
+{"id": "q20", "type": "ood", "lang": "en", "question": "How do I calculate the bending moment of a steel beam?", "gold_sections": []}
+{"id": "q21", "type": "ood", "lang": "en", "question": "What fire-resistance rating is required for a garage wall?", "gold_sections": []}
+{"id": "q22", "type": "followup", "lang": "zh", "history": ["楼梯踏步高最大多少？"], "question": "那踏面呢？", "gold_sections": ["R311.7.5.2"]}
+{"id": "q23", "type": "followup", "lang": "en", "history": ["What is the minimum ceiling height for habitable rooms?"], "question": "And for bathrooms?", "gold_sections": ["R305.1"]}
+{"id": "q24", "type": "followup", "lang": "zh", "history": ["护栏最低多高？"], "question": "那栏杆的空隙有什么限制？", "gold_sections": ["R312.1.3"]}
+{"id": "q25", "type": "table", "lang": "zh", "question": "2x6 立柱承托两层楼板加屋面时，最大间距是多少？", "gold_sections": ["R602.3(5)"]}
+{"id": "q26", "type": "table", "lang": "en", "question": "What is the maximum height of a 2x4 nonbearing wall?", "gold_sections": ["R602.3(5)"]}

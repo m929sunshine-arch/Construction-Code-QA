@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/raw/
+.streamlit/secrets.toml
+data/index/
+# 评测输出（正式结果见 docs/results_irc2018.md）；ragas_samples 含规范原文，不能提交
+eval/results/
+.pytest_cache/
+*.pdf

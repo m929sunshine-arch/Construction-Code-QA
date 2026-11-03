@@ -1,0 +1,47 @@
+# 示例数据配置：clone 后不需要任何模型和 Key 就能跑通（CI 也用这份）。
+# 真实规范请用 config.irc2018.yaml：在 .env 里写 IRC_RAG_CONFIG=config.irc2018.yaml
+data:
+  source: data/sample/irc_sample.md   # 换成你自己整理的 IRC 文本（放在 data/raw/，不提交）
+  glossary: data/glossary.yaml
+
+chunking:
+  mode: section          # section = 条款级分块；naive = 固定长度（消融基线）
+  max_chars: 1200        # 条款超过该长度时按句子再切，并保留标题路径
+  naive_size: 500
+  naive_overlap: 50
+
+embedding:
+  # auto: 优先 bge-m3（需安装 sentence-transformers），不可用时退回本地 TF-IDF
+  # bge-m3 | openai_compatible | tfidf
+  backend: auto
+  model: BAAI/bge-m3
+  # openai_compatible 时使用，例如 DashScope：
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  api_model: text-embedding-v3
+  api_key_env: EMBEDDING_API_KEY
+
+vector_store:
+  backend: memory        # memory = 内存矩阵；milvus = Milvus Lite 本地文件（Linux/macOS），可换成服务端 uri
+  uri: data/index/milvus.db
+
+retrieval:
+  hybrid: true           # true = 向量 + BM25（RRF 融合）；false = 只用向量
+  candidates: 20         # 每路召回数量
+  rrf_k: 60
+  top_k: 5
+
+rerank:
+  enabled: false         # true 需安装 sentence-transformers 并能下载模型
+  model: BAAI/bge-reranker-v2-m3
+
+refusal:
+  # 检索到的最高向量相似度低于该值时直接拒答，不调用 LLM。换模型或语料后用 python -m eval.calibrate 重新校准
+  min_dense_score: 0.2   # TF-IDF 模式在示例数据上的校准值
+  min_rerank_score: 0.01 # 开启重排时额外拦截极低分；主要依靠向量相似度阈值
+
+llm:
+  # 未设置 API Key 时自动进入“离线摘录模式”，直接摘录条文并标注条款号
+  base_url: https://api.deepseek.com
+  model: deepseek-chat
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.1

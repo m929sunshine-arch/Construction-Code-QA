@@ -1,0 +1,49 @@
+# 真实规范配置：IRC 2018 全书（第 1～43 章），bge-m3 + 重排 + DeepSeek。
+# 启用方式：在 .env 里写 IRC_RAG_CONFIG=config.irc2018.yaml
+# 规范原文需自行准备：python -m ircrag.convert data/raw/IRC.pdf --chapters 1-43 -o data/raw/irc.md
+data:
+  source: data/raw/irc.md             # 由 ircrag.convert 生成，不提交到仓库
+  glossary: data/glossary.yaml
+
+chunking:
+  mode: section          # section = 条款级分块；naive = 固定长度（消融基线）
+  max_chars: 1200        # 条款超过该长度时按句子再切，并保留标题路径
+  naive_size: 500
+  naive_overlap: 50
+
+embedding:
+  # auto: 优先 bge-m3（需安装 sentence-transformers），不可用时退回本地 TF-IDF
+  # bge-m3 | openai_compatible | tfidf
+  backend: bge-m3
+  model: BAAI/bge-m3
+  # openai_compatible 时使用，例如 DashScope：
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  api_model: text-embedding-v3
+  api_key_env: EMBEDDING_API_KEY
+
+vector_store:
+  backend: memory        # memory = 内存矩阵；milvus = Milvus Lite 本地文件（Linux/macOS），可换成服务端 uri
+  uri: data/index/milvus.db
+
+retrieval:
+  hybrid: true           # true = 向量 + BM25（RRF 融合）；false = 只用向量
+  candidates: 20         # 每路召回数量
+  rrf_k: 60
+  top_k: 5
+
+rerank:
+  enabled: true
+  model: BAAI/bge-reranker-v2-m3
+
+refusal:
+  # 检索到的最高向量相似度低于该值时直接拒答，不调用 LLM。换模型或语料后用 python -m eval.calibrate 重新校准
+  min_dense_score: 0.55  # 全书版校准（55 题）：库内最低 0.574，库外最高 0.571，间隔很小，取略低值以免误拒
+                         # 4 章版曾用 0.6（库内最低 0.612，库外最高 0.585）
+  min_rerank_score: 0.01 # 重排模型对口语化中文提问打分偏低（全书版库内最低 0.023，库外最高 0.089），不能单独用来拒答，只拦截极低分
+
+llm:
+  # 未设置 API Key 时自动进入“离线摘录模式”，直接摘录条文并标注条款号
+  base_url: https://api.deepseek.com
+  model: deepseek-chat
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.1

@@ -1,0 +1,15 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv pip install --system -r requirements.txt -r requirements-milvus.txt
+      - run: pytest -q
+      - run: python -m eval.run_eval --groups A B C --no-llm

@@ -1,0 +1,2 @@
+# 可选：本地 bge-m3 向量模型与 bge-reranker 重排（首次运行会下载模型，约 2–3 GB）
+sentence-transformers>=3.0

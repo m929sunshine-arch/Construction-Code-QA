@@ -1,0 +1,99 @@
+# 中英建筑术语表：中文提问时，把命中的中文术语补充为英文检索词
+# 按需扩充；键为中文，值为英文检索词
+立柱: stud studs
+墙骨: stud studs
+龙骨: stud studs
+间距: spacing on center
+楼梯: stair stairway
+梯段: flight stairs
+净空: headroom
+净高: headroom ceiling height
+层高: ceiling height
+天花板高度: ceiling height
+吊顶高度: ceiling height
+踏步高: riser height
+踢面: riser
+踏面: tread depth
+踏步宽: tread depth
+扶手: handrail
+护栏: guard guards
+栏杆: guard guards
+窗台: window sill height
+逃生: emergency escape rescue opening
+救援: emergency escape rescue opening
+卧室: sleeping room bedroom
+烟雾报警器: smoke alarm
+烟感: smoke alarm
+阁楼: attic
+通风: ventilation vent
+检修口: attic access opening
+顶板: top plate
+顶梁板: top plate
+过梁: header headers
+防火封堵: fireblocking
+防火隔断: fireblocking
+支撑: bracing braced wall
+抗侧: bracing braced wall
+搁栅: joist joists
+楼板梁: joist joists
+跨度: span spans
+支承: bearing
+混凝土地坪: concrete slab floor
+地坪: slab floor
+防潮层: vapor retarder
+采光: natural light glazing
+自然通风: natural ventilation openable
+房间面积: habitable room floor area
+最小面积: minimum area
+安全玻璃: safety glazing hazardous
+玻璃: glazing
+抗拔: uplift tie-down
+屋面: roof
+屋顶: roof
+外墙: exterior wall
+承重墙: bearing wall
+宽度: width
+高度: height
+面积: area
+厚度: thick thickness
+喷淋: sprinkler
+天花板: ceiling height
+卫生间: bathroom toilet room
+厕所: toilet room
+洗衣房: laundry room
+地下室: basement
+走廊: hallway
+两层楼板: two floors
+一层楼板: one floor
+楼层: floor
+非承重墙: nonbearing walls
+无侧向支撑高度: laterally unsupported height
+规格: size
+椽子: rafter
+桁架: truss
+连接件: connector connectors
+锚固: attach anchor
+楼板: floor
+
+# —— 全书扩展（第 5～43 章：屋面、外墙、电气、管道、机械、燃气、节能）——
+黏土瓦: clay tile roof tile
+混凝土瓦: concrete tile roof tile
+屋面瓦: roof tile
+沥青瓦: asphalt shingles
+屋面板: roof deck sheathing
+外墙防水: water-resistive barrier
+防水层: water-resistive barrier
+瓷砖: ceramic tile
+插座: receptacle outlet
+台面: countertop
+漏电保护: ground-fault circuit-interrupter GFCI
+干衣机: clothes dryer exhaust duct
+排气管: exhaust duct
+支撑间距: supported at intervals
+淋浴: shower
+烟囱: chimney
+燃气管: gas piping
+活荷载: live load
+设计活荷载: uniformly distributed live load
+保温: insulation R-value
+气候区: climate zone
